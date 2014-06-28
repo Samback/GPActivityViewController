@@ -169,6 +169,7 @@
 #pragma mark - ActivityViewActionDelegate
 
 - (void)cancelButtonTapped {
+	[[NSNotificationCenter defaultCenter] postNotificationName:@"SharingControllerWasClosed" object:nil];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
