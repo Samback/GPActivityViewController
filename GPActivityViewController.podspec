@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
                     :tag => s.version.to_s }
   s.license     = { :type => "MIT", :file => "LICENSE.md" }
 
-  s.platform = :ios, '5.0'
+  s.platform = :ios, '7.0'
   s.requires_arc = true
 
   s.source_files = 'GPActivityViewController'
@@ -16,12 +16,13 @@ Pod::Spec.new do |s|
   s.resources = "GPActivityViewController/Resources/GPActivityViewController.bundle", "GPActivityViewController/Resources/*.lproj"
   s.preserve_path = "LICENSE.md"
 
-  s.ios.deployment_target = '5.0'
+  s.ios.deployment_target = '7.0'
   s.ios.frameworks = 'QuartzCore', 'MessageUI', 'Twitter'
   s.ios.weak_frameworks = 'Social'
   
   s.dependency 'AFNetworking', '~> 1.3.0'
-  s.dependency 'Facebook-iOS-SDK', '~> 3.6'
+  s.dependency 'FBSDKCoreKit'
+  s.dependency 'FBSDKLoginKit'
   s.dependency 'DEFacebookComposeViewController', '~> 1.0.0'
   s.dependency 'REComposeViewController', '~> 2.0.3'
 end
