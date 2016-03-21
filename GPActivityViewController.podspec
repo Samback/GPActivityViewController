@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name        = 'GPActivityViewController'
-  s.version     = '1.3.1'
+  s.version     = '2.0.2'
   s.authors     = { 'Gleb Pinigin' => 'gpinigin@gmail.com' }
   s.homepage    = 'https://github.com/gpinigin/GPActivityViewController'
   s.summary     = 'Alternative to UIActivityViewController compatible with iOS5.0.'
@@ -19,7 +19,7 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '5.0'
   s.ios.frameworks = 'QuartzCore', 'MessageUI', 'Twitter'
   s.ios.weak_frameworks = 'Social'
-
+  
   s.dependency 'AFNetworking', '~> 1.3.0'
   s.dependency 'Facebook-iOS-SDK', '~> 3.6'
   s.dependency 'DEFacebookComposeViewController', '~> 1.0.0'
