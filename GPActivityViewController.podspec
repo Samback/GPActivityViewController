@@ -23,6 +23,6 @@ Pod::Spec.new do |s|
   s.dependency 'AFNetworking', '~> 1.3.0'
   s.dependency 'FBSDKCoreKit'
   s.dependency 'FBSDKLoginKit'
-  s.dependency 'DEFacebookComposeViewController', '~> 1.0.0'
+ # s.dependency 'DEFacebookComposeViewController'
   s.dependency 'REComposeViewController', '~> 2.0.3'
 end

@@ -21,7 +21,7 @@
 //
 
 #import "GPFacebookActivity.h"
-#import "DEFacebookComposeViewController.h"
+//#import "DEFacebookComposeViewController.h"
 #import <Social/Social.h>
 
 NSString *const GPActivityFacebook = @"GPActivityFacebook";
@@ -51,30 +51,30 @@ NSString *const GPActivityFacebook = @"GPActivityFacebook";
     NSURL *url = [self.userInfo objectForKey:@"url"];
     UIImage *image = [self.userInfo objectForKey:@"image"];
     
-    DEFacebookComposeViewController *composeController = [[DEFacebookComposeViewController alloc] init];
-    if (text) {
-        [composeController setInitialText:text];
-    }
-    
-    if (url) {
-        [composeController addURL:url];
-    }
-    
-    if (image) {
-        [composeController addImage:image];
-    }
-    
-    UIViewController *presentingController = [UIApplication sharedApplication].delegate.window.rootViewController;
-    presentingController.modalPresentationStyle = UIModalPresentationCurrentContext;
-    
-    typeof(self) __weak weakSelf = self;
-    typeof(composeController) __weak weakComposer = composeController;
-    composeController.completionHandler = ^(DEFacebookComposeViewControllerResult result) {
-        [weakComposer dismissViewControllerAnimated:YES completion:nil];
-        [weakSelf activityDidFinish:result == DEFacebookComposeViewControllerResultDone];
-    };
-    
-    [presentingController presentViewController:composeController animated:YES completion:nil];
+//    DEFacebookComposeViewController *composeController = [[DEFacebookComposeViewController alloc] init];
+//    if (text) {
+//        [composeController setInitialText:text];
+//    }
+//    
+//    if (url) {
+//        [composeController addURL:url];
+//    }
+//    
+//    if (image) {
+//        [composeController addImage:image];
+//    }
+//    
+//    UIViewController *presentingController = [UIApplication sharedApplication].delegate.window.rootViewController;
+//    presentingController.modalPresentationStyle = UIModalPresentationCurrentContext;
+//    
+//    typeof(self) __weak weakSelf = self;
+//    typeof(composeController) __weak weakComposer = composeController;
+//    composeController.completionHandler = ^(DEFacebookComposeViewControllerResult result) {
+//        [weakComposer dismissViewControllerAnimated:YES completion:nil];
+//        [weakSelf activityDidFinish:result == DEFacebookComposeViewControllerResultDone];
+//    };
+//    
+//    [presentingController presentViewController:composeController animated:YES completion:nil];
 }
 
 @end
